@@ -1,6 +1,6 @@
 {
   "name": "@blackmad/md-googlify",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "auto-linkify markdown documents",
   "bin": {
     "my-cli-demo": "bin/index.js"
