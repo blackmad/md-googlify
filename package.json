@@ -32,5 +32,8 @@
   "dependencies": {
     "duck-duck-scrape": "^2.2.4",
     "he": "^1.2.0"
-  }
+  },
+  "files": [
+    "bin/*"
+  ]
 }
