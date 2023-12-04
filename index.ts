@@ -10,9 +10,18 @@ export async function getTopSearchResultFromDDG(params: {
   const { name, searchQuerySuffix } = params;
   const query = `${name} ${searchQuerySuffix}`;
   console.log(`Searching for ${query}`);
-  const searchResults = await DDG.search(query, {
-    safeSearch: DDG.SafeSearchType.STRICT,
-  });
+  const searchResults = await DDG.search(
+    query,
+    {
+      safeSearch: DDG.SafeSearchType.STRICT,
+    },
+    {
+      accept: 'application/json',
+      content_type: 'application/json',
+    },
+  );
+
+  await new Promise((resolve) => setTimeout(resolve, 5000));
 
   const topResult = searchResults.results[0];
 
