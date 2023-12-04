@@ -6,7 +6,7 @@
     "declaration": true, // creates d.ts type declarations
     "declarationMap": true, // creates map files for our d.ts files
     "sourceMap": true, // creates map files for our source code
-    "outDir": "bin", // compile source code into "bin" folder
+    "outDir": "dist",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true,

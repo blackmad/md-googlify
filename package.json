@@ -8,7 +8,8 @@
   "main": "bin/index.js",
   "scripts": {
     "watch": "tsc -w",
-    "prepublishOnly": "node prepublish.js && tsc",
+    "build": "tsc && mkdir -p bin && echo '#!/usr/bin/env node' > bin/index.js && cat dist/index.js >> bin/index.js && chmod +x bin/index.js",
+    "prepublishOnly": "node prepublish.js && npm run build",
     "release": "cross-env RELEASE_MODE=true np --no-tests"
   },
   "author": "blackmad",
